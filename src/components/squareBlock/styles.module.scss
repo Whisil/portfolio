@@ -1,0 +1,36 @@
+@import '../../styles/colors.scss';
+
+.block{
+    background-color: #fff;
+}
+.radius-70{
+    border-radius: 70px;
+}
+.radius-75{
+    border-radius: 75px;
+}
+
+.padding-large{
+    padding: 70px;
+}
+
+.padding-xl{
+    padding: 180px;
+}
+
+.padding-none{
+    padding: 0;
+}
+
+.bgColor-white{
+    background-color:$white;
+}
+
+.bgColor-lightBlack{
+    background-color: $lightBlack;
+}
+
+.bgColor-yellow{
+    background-color: $yellow;
+}
+

@@ -1,0 +1,70 @@
+@import '../../styles/colors.scss';
+
+.header{
+    padding-top: 10px;
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "name name . ."
+    "name name location location"
+    ". . location location"
+    ;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-bottom: 10px;
+
+    .name{
+        grid-area: name;
+
+        .nameText{
+            color: $black;
+            font-size: 72px;
+            font-weight: 700;
+            cursor: default;
+        }
+    }
+
+    .location{
+        grid-area: location;
+        position: relative;
+        overflow: hidden;
+
+        .locationText{
+            color: $black;
+            font-size: 72px;
+            text-align: right;
+            position: relative;
+            z-index: 2;
+            cursor: default;
+        }
+
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            height: 50%;
+            width: 100%;
+            left: 0;
+            right: 0;
+            top: 0;
+            background-color: $blue;
+            opacity: 0;
+            transition: opacity .6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        &:hover{
+            &::before{
+                opacity: 1;
+            }
+            
+        }
+    }
+
+    .hoverEffect{
+        transition: transform .6s ease;
+        &:hover{
+            transform: scale(0.96);
+        }
+    }
+    
+}

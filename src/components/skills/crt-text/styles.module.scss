@@ -1,0 +1,70 @@
+@import '../../../styles/colors.scss';
+
+.crt{
+    display: flex;
+    gap: 40px;
+    white-space: nowrap;
+    h1{
+      font-family: 'Press Start 2P', cursive;
+      font-size: 120px;
+      line-height: 1.2;
+      animation: 0.01s linear 0s textFlicker infinite alternate, 
+                2s linear 0s textOpacity infinite alternate;
+    }
+}
+  
+@keyframes textFlicker {
+    0% {
+        text-shadow: 2px 0 0 #ea36af, -2px 0 0 #75fa69;
+    }
+    100% {
+        text-shadow: 6px 2px 3px #ea36af, -5px -2px 3px #75fa69;
+    }
+}
+@keyframes textOpacity {
+    0%{
+        opacity: 0.9;
+    } 
+    2%{
+        opacity: 1;
+    }
+    20%{
+        opacity: 1;
+    }
+    38%{
+        opacity: 1;
+    }
+    40%{
+        opacity: 0.9;
+    }
+    42%{
+        opacity: 1;
+    }
+    74%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0.9;
+    }
+    76%{
+        opacity: 1;
+    }
+    89%{
+        opacity: 1;
+    }
+    89%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 0.9;
+    }
+    91%{
+        opacity: 1;
+    }
+    95%{
+        opacity: 0.95;
+    }
+    100% {
+        opacity: 1;
+    }
+}
