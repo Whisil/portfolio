@@ -4,15 +4,40 @@
     display: flex;
     gap: 40px;
     white-space: nowrap;
+    justify-content: flex-start;
+    
     h1{
+      padding-right: 60px;
       font-family: 'Press Start 2P', cursive;
-      font-size: 120px;
-      line-height: 1.2;
+      font-size: 180px;
+      line-height: 1;
       animation: 0.01s linear 0s textFlicker infinite alternate, 
-                2s linear 0s textOpacity infinite alternate;
+                2s linear 0s textOpacity infinite alternate,
+                15s linear 0s runningLine infinite;
+    }
+
+    .spacing{
+        display: inline-block;
+        width: 40px;
+    }
+}
+
+.changeDirection{
+    h1{
+        animation-direction: reverse;
     }
 }
   
+  @keyframes runningLine {
+    from {
+      transform: translateX(0);
+    }
+    
+    to {
+      transform: translateX(calc(-100% - 40px));
+    }
+  }
+
 @keyframes textFlicker {
     0% {
         text-shadow: 2px 0 0 #ea36af, -2px 0 0 #75fa69;

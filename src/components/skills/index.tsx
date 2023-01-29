@@ -12,7 +12,7 @@ const Skills = () => {
     >
       <div className={styles.runningText}>
         <CRTText text="Front-End" />
-        <CRTText text="Developer" />
+        <CRTText text="Developer" changeDirection />
       </div>
     </SquareBlock>
   );
