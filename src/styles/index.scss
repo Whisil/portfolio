@@ -5,6 +5,11 @@
   src: url(./fonts/Disket-Mono-Bold.ttf);
 }
 
+@font-face {
+  font-family: Satoshi;
+  src: url(./fonts/Satoshi-Variable.ttf);
+}
+
 html,
 body {
   padding: 0;
@@ -20,7 +25,7 @@ a {
 
 * {
   box-sizing: border-box;
-  font-family: Disket;
+  font-family: Satoshi;
 }
 
 div,

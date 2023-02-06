@@ -14,6 +14,7 @@ const CRTText = ({
     >
       <h1>{text}</h1>
       <h1>{text}</h1>
+      <h1>{text}</h1>
     </div>
   );
 };
