@@ -17,7 +17,8 @@
             line-height: 1.2;
             animation: 0.01s linear 0s textFlicker infinite alternate, 
                     2s linear 0s textOpacity infinite alternate;
-            
+            transition: transform .5s cubic-bezier(0,0,.2,1);
+
             &:first-child{
                 margin-left: -5%;
             }
