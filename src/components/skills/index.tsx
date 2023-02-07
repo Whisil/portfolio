@@ -1,6 +1,6 @@
+import clsx from 'clsx';
 import SquareBlock from '../squareBlock';
 import Carousel from './carousel';
-import CRTText from './crt-text';
 import styles from './styles.module.scss';
 
 const Skills = () => {
@@ -11,12 +11,12 @@ const Skills = () => {
       padding="none"
       className={styles.tech}
     >
-      <div className={styles.runningText}>
-        <CRTText text="Front-End" />
-        <CRTText text="Developer" changeDirection />
+      <div className={styles.heading}>
+        <h1 className={styles.crtText}>Front-End</h1>
+        <h1 className={styles.crtText}>Developer</h1>
       </div>
 
-      <h2 className={styles.techTitle}>
+      <h2 className={clsx(styles.techTitle, styles.crtText)}>
         There's a lot to learn <br />
         but here's what I know
       </h2>

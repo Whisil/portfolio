@@ -1,11 +1,12 @@
-$itemsCount: 13;
-$itemSize: 300px;
+$itemsCount: 14;
+$itemSize: 350px;
 
 .carousel{
     width: 130%;
     margin-left: -90px;
     overflow: hidden;
-    transform: rotate(-20deg);
+    transform: rotate(-15deg);
+    pointer-events: none;
 
     &Track{
         animation: 25s linear 0s scroll infinite;

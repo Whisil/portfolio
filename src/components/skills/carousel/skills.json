@@ -1,5 +1,9 @@
 [
     {
+        "src": "images/js.webp",
+        "alt": "JavaScript"
+    },
+    {
         "src": "/images/react.webp",
         "alt": "React"
     },
