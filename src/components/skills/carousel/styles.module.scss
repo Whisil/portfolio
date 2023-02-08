@@ -11,9 +11,10 @@ $itemSize: 350px;
     &Track{
         animation: 25s linear 0s scroll infinite;
         display: flex;
+        will-change: transform;
         gap: 20px;
         align-items: center;
-        width: calc(#{$itemSize} * (#{$itemsCount} * 2) + 20px * #{$itemsCount});
+        width: calc(#{$itemSize} * (#{$itemsCount} * 2) + 40px * #{$itemsCount});
     }
 }
 
@@ -29,12 +30,14 @@ $itemSize: 350px;
     height: $itemSize;
     display: flex;
     align-items: center;
+    
 
     img{
         max-width: 90%;
         height: auto;
         max-height: 100%;
         margin: 0 auto;
+
     }
 }
 
