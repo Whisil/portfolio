@@ -27,13 +27,13 @@ const Skills = () => {
       <div className={styles.heading}>
         <h1
           className={styles.crtText}
-          style={{ transform: `translateX(${scroll * 0.22}px)` }}
+          style={{ transform: `translateX(${scroll * 0.25}px)` }}
         >
           Front-End
         </h1>
         <h1
           className={styles.crtText}
-          style={{ transform: `translateX(-${scroll * 0.22}px)` }}
+          style={{ transform: `translateX(-${scroll * 0.25}px)` }}
         >
           Developer
         </h1>

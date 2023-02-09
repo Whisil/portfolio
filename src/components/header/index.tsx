@@ -1,26 +1,66 @@
-import clsx from 'clsx';
+import { useRef } from 'react';
 import SquareBlock from '../squareBlock';
 import styles from './styles.module.scss';
 
 const Header = () => {
+  const hiddenNameRef = useRef<HTMLSpanElement>(null);
+  const hiddenImageRef = useRef<HTMLImageElement>(null);
+
+  const handleNameHover = (e: any) => {
+    let x = e.clientX;
+    let y = e.clientY;
+
+    if (hiddenImageRef.current && hiddenNameRef.current) {
+      hiddenImageRef.current.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+      hiddenNameRef.current.style.setProperty('--x', x - 75 + 'px');
+      hiddenNameRef.current.style.setProperty('--y', y - 75 + 'px');
+    }
+  };
+
   return (
     <div className={styles.header}>
       <SquareBlock
         borderRadius={70}
         bgColor="white"
-        className={clsx(styles.name, styles.hoverEffect)}
+        mainClassName={styles.name}
+        className={styles.nameInner}
         padding="large"
+        hoverEffect
+        onMouseMove={handleNameHover}
       >
         <h2 className={styles.nameText}>
           David
           <br /> Haidamaka
         </h2>
+
+        <span className={styles.hoverContainer}>
+          <span
+            className={styles.nameTextHidden}
+            aria-hidden="true"
+            ref={hiddenNameRef}
+          >
+            David Haidamaka
+          </span>
+
+          <span className={styles.imageContainer}>
+            <span className={styles.imageInner}>
+              <img
+                className={styles.nameImage}
+                src="/images/me.jpg"
+                alt="Tokyo Tower"
+                ref={hiddenImageRef}
+              />
+            </span>
+          </span>
+        </span>
       </SquareBlock>
       <SquareBlock
         borderRadius={70}
         bgColor="yellow"
-        className={clsx(styles.location, styles.hoverEffect)}
+        className={styles.locationPseudo}
+        mainClassName={styles.location}
         padding="large"
+        hoverEffect
       >
         <h2 className={styles.locationText}>
           Based in <br />

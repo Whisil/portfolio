@@ -1,5 +1,6 @@
 import Header from './components/header';
 import Skills from './components/skills';
+import Work from './components/work';
 import styles from './styles/app.module.scss';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className={styles.container}>
       <Header />
       <Skills />
+      <Work />
     </div>
   );
 }

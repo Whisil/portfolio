@@ -1,5 +1,14 @@
 @import '../../styles/colors.scss';
 
+@mixin textStyles {
+    color: $black;
+    font-family: Disket;
+    font-size: 72px;
+    font-weight: 700;
+    cursor: default;
+    transition: transform .6s ease;
+}
+
 .header{
     padding-top: 10px;
     display: grid;
@@ -15,13 +24,71 @@
 
     .name{
         grid-area: name;
+        position: relative;
+        &Inner{
+            overflow: hidden
+        }
 
         .nameText{
-            color: $black;
-            font-family: Disket;
-            font-size: 72px;
-            font-weight: 700;
-            cursor: default;
+            @include textStyles;
+        }
+
+        .nameTextHidden{
+            @include textStyles;
+            color: $white;
+            z-index: 2;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            clip-path: circle(125px at var(--x) var(--y));
+            opacity: 0;
+            transition: opacity 250ms ease;
+        }
+
+        .imageContainer{
+            z-index: 1;
+            position: absolute;
+            top: -75px;
+            left: -75px;
+            width: 250px;
+            height: 250px;
+            opacity: 0;
+            transition: opacity 250ms ease;
+        }
+
+        .imageInner{
+            position: absolute;
+            top: -125px;
+            left: -125px;
+            width: 250px;
+            height: 250px;
+        }
+
+        .nameImage{
+            display: block;
+            max-width: 100%;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+        }
+
+        &:hover{
+            .hoverContainer{
+                .nameTextHidden{
+                    opacity: 1
+                }
+                .imageContainer{
+                    opacity: 1;
+                }
+            }
         }
     }
 
@@ -31,15 +98,15 @@
         overflow: hidden;
 
         .locationText{
-            color: $black;
-            font-family: Disket;
-            font-size: 72px;
+            @include textStyles;
             text-align: right;
             position: relative;
             z-index: 2;
-            cursor: default;
         }
-
+    }
+    
+    .locationPseudo{
+        overflow: hidden;
         &::before{
             content: "";
             display: block;
@@ -53,20 +120,11 @@
             opacity: 0;
             transition: opacity .6s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
-
-        &:hover{
-            &::before{
-                opacity: 1;
-            }
-            
-        }
     }
 
-    .hoverEffect{
-        transition: transform .6s ease;
-        &:hover{
-            transform: scale(0.96);
+    .location:hover{
+        .locationPseudo::before{
+            opacity: 1;
         }
     }
-    
 }
