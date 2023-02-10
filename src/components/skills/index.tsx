@@ -23,6 +23,7 @@ const Skills = () => {
       bgColor="lightBlack"
       padding="none"
       className={styles.tech}
+      mainClassName={styles.techContainer}
     >
       <div className={styles.heading}>
         <h1

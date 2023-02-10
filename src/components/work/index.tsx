@@ -1,12 +1,23 @@
-import SquareBlock from '../squareBlock';
+import WorkItem from './workItem';
+import workDb from './work.json';
 
 import styles from './styles.module.scss';
 
 const Work = () => {
   return (
-    <SquareBlock padding="large" borderRadius={70}>
-      hey
-    </SquareBlock>
+    <div className={styles.workContainer}>
+      {workDb.map((item, index) => (
+        <WorkItem
+          key={item.name}
+          bgColor={item.bgColor}
+          name={item.name}
+          type={item.type}
+          link={item.link}
+          imgSrc={item.imgSrc}
+          index={index + 1}
+        />
+      ))}
+    </div>
   );
 };
 

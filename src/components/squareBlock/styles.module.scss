@@ -8,6 +8,9 @@
     border-radius: 75px;
 }
 
+.padding-md{
+    padding: 60px;
+}
 .padding-large{
     padding: 70px;
 }
@@ -34,9 +37,10 @@
 
 .hoverEffect{
 
-    &Inner{
+    &Inner, &InnerReverse{
         transition: transform .6s ease;
     }
+    
     
     .transformWrapper{
         transition: transform .6s ease;
@@ -48,6 +52,9 @@
 
         .hoverEffectInner{
             transform: scale(1.07);
+        }
+        .hoverEffectInnerReverse{
+            transform: scale(0.97);
         }
     }
 }

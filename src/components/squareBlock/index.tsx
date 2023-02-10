@@ -8,9 +8,10 @@ interface SquareBlockProps {
   mainClassName?: string;
   bgColor?: string;
   children?: React.ReactNode;
-  padding: 'large' | 'xl' | 'none';
-  hoverEffect?: boolean;
+  padding: 'md' | 'large' | 'xl' | 'none';
+  hover?: 'regular' | 'reverse';
   onMouseMove?: (e: React.MouseEvent) => void;
+  containerClassName?: string;
 }
 
 const SquareBlock = ({
@@ -20,11 +21,12 @@ const SquareBlock = ({
   className,
   mainClassName,
   padding,
-  hoverEffect,
+  hover,
   onMouseMove,
+  containerClassName,
 }: SquareBlockProps) => {
   return (
-    <div className={clsx(mainClassName, hoverEffect && styles.hoverEffect)}>
+    <div className={clsx(mainClassName, hover && styles.hoverEffect)}>
       <div
         className={clsx(
           styles.transformWrapper,
@@ -35,7 +37,14 @@ const SquareBlock = ({
         )}
         onMouseMove={onMouseMove}
       >
-        <div className={clsx(hoverEffect && styles.hoverEffectInner)}>
+        <div
+          className={clsx(
+            containerClassName,
+            hover === 'regular'
+              ? styles.hoverEffectInner
+              : styles.hoverEffectInnerReverse,
+          )}
+        >
           {children}
         </div>
       </div>

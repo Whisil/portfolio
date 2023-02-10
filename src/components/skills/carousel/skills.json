@@ -1,58 +1,58 @@
 [
     {
-        "src": "images/js.webp",
+        "src": "images/tech/js.webp",
         "alt": "JavaScript"
     },
     {
-        "src": "/images/react.webp",
+        "src": "/images/tech/react.webp",
         "alt": "React"
     },
     {
-        "src": "/images/typescript.webp",
+        "src": "/images/tech/typescript.webp",
         "alt": "Typescript"
     },
     {
-        "src": "/images/redux.webp",
+        "src": "/images/tech/redux.webp",
         "alt": "Redux"
     },
     {
-        "src": "/images/sass.webp",
+        "src": "/images/tech/sass.webp",
         "alt": "SASS"
     },
     {
-        "src": "/images/nextjs.webp",
+        "src": "/images/tech/nextjs.webp",
         "alt": "NEXT.JS"
     },
     {
-        "src": "/images/bootstrap.webp",
+        "src": "/images/tech/bootstrap.webp",
         "alt": "Bootstrap"
     },
     {
-        "src": "/images/figma.webp",
+        "src": "/images/tech/figma.webp",
         "alt": "Figma"
     },
     {
-        "src": "/images/git.webp",
+        "src": "/images/tech/git.webp",
         "alt": "Git"
     },
     {
-        "src": "/images/parse-platform.webp",
+        "src": "/images/tech/parse-platform.webp",
         "alt": "Parse Platform"
     },
     {
-        "src": "/images/photoshop.webp",
+        "src": "/images/tech/photoshop.webp",
         "alt": "Photoshop"
     },
     {
-        "src": "/images/tailwind.webp",
+        "src": "/images/tech/tailwind.webp",
         "alt": "Tailwind CSS"
     },
     {
-        "src": "/images/vercel.webp",
+        "src": "/images/tech/vercel.webp",
         "alt": "Vercel"
     },
     {
-        "src": "/images/vs-code.webp",
+        "src": "/images/tech/vs-code.webp",
         "alt": "VSCode"
     }
 ]

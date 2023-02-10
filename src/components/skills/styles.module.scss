@@ -1,12 +1,16 @@
 @import '../../styles/colors.scss';
 
+.techContainer{
+    margin-bottom: 10px;
+}
+
 .tech{
     overflow: hidden;
     position: relative;
     
     &::before{
         content: "";
-        background: url("../../../public/images/noise-bg1.gif");
+        background: url("../../../public/images/noise-bg.gif");
         background-size: cover;
         backdrop-filter: blur(220px);
         opacity: 0.2;

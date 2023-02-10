@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import React, { useRef } from 'react';
 import SquareBlock from '../squareBlock';
 import styles from './styles.module.scss';
 
@@ -6,7 +6,7 @@ const Header = () => {
   const hiddenNameRef = useRef<HTMLSpanElement>(null);
   const hiddenImageRef = useRef<HTMLImageElement>(null);
 
-  const handleNameHover = (e: any) => {
+  const handleNameHover = (e: React.MouseEvent) => {
     let x = e.clientX;
     let y = e.clientY;
 
@@ -25,7 +25,7 @@ const Header = () => {
         mainClassName={styles.name}
         className={styles.nameInner}
         padding="large"
-        hoverEffect
+        hover="regular"
         onMouseMove={handleNameHover}
       >
         <h2 className={styles.nameText}>
@@ -39,7 +39,8 @@ const Header = () => {
             aria-hidden="true"
             ref={hiddenNameRef}
           >
-            David Haidamaka
+            David
+            <br /> Haidamaka
           </span>
 
           <span className={styles.imageContainer}>
@@ -60,7 +61,7 @@ const Header = () => {
         className={styles.locationPseudo}
         mainClassName={styles.location}
         padding="large"
-        hoverEffect
+        hover="regular"
       >
         <h2 className={styles.locationText}>
           Based in <br />

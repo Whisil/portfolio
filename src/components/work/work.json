@@ -1,0 +1,44 @@
+[
+    {
+        "bgColor": "lightBlack",
+        "name": "Calendar",
+        "type": "showcase",
+        "link": "https://calendar-nine-woad.vercel.app/",
+        "imgSrc": "/images/work/calendar.webp"
+    },
+    {
+        "bgColor": "lightBlack",
+        "name": "Annotations app",
+        "type": "showcase",
+        "link": "https://annotations-app.vercel.app/",
+        "imgSrc": "/images/work/annotations-app.webp"
+    },
+    {
+        "bgColor": "lightBlack",
+        "name": "Kanban",
+        "type": "showcase",
+        "link": "https://github-kanban-board.vercel.app/",
+        "imgSrc": "/images/work/github-kanban.webp"
+    },
+    {
+        "bgColor": "lightBlack",
+        "name": "Crypto-vk",
+        "type": "repo",
+        "link": "https://github.com/Whisil/crypto-vk",
+        "imgSrc": "/images/work/crypto-vk.webp"
+    },
+    {
+        "bgColor": "lightBlack",
+        "name": "Crypto Dashboard",
+        "type": "repo",
+        "link": "https://github.com/Whisil/crypto-wallet-dashboard",
+        "imgSrc": "/images/work/crypto-dash.webp"
+    },
+    {
+        "bgColor": "lightBlack",
+        "name": "UPQODE",
+        "type": "showcase",
+        "link": "https://resplendent-haupia-0ff8ca.netlify.app/",
+        "imgSrc": "/images/work/UPQODE.webp"
+    }
+]
