@@ -13,7 +13,7 @@ const Work = () => {
           name={item.name}
           type={item.type}
           link={item.link}
-          imgSrc={item.imgSrc}
+          mediaSrc={item.imgSrc}
           index={index + 1}
         />
       ))}

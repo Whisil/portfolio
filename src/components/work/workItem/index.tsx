@@ -1,4 +1,4 @@
-import SquareBlock from '../../squareBlock';
+import SquareWorkBlock from '../../squareWorkBlock';
 
 import styles from './styles.module.scss';
 
@@ -7,7 +7,7 @@ interface WorkItemProps {
   name: string;
   type: string;
   link: string;
-  imgSrc: string;
+  mediaSrc: string;
   index: number;
 }
 
@@ -16,16 +16,18 @@ const WorkItem = ({
   name,
   type,
   link,
-  imgSrc,
+  mediaSrc,
   index,
 }: WorkItemProps) => {
   return (
-    <SquareBlock
+    <SquareWorkBlock
       padding="md"
       borderRadius={70}
       className={styles.item}
       bgColor={bgColor}
-      hover="reverse"
+      hover
+      link={link}
+      media={mediaSrc}
       containerClassName={styles.itemContainer}
     >
       <div className={styles.header}>
@@ -62,7 +64,7 @@ const WorkItem = ({
           )}
         </span>
       </div>
-    </SquareBlock>
+    </SquareWorkBlock>
   );
 };
 

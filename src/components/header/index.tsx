@@ -25,7 +25,7 @@ const Header = () => {
         mainClassName={styles.name}
         className={styles.nameInner}
         padding="large"
-        hover="regular"
+        hover
         onMouseMove={handleNameHover}
       >
         <h2 className={styles.nameText}>
@@ -61,7 +61,7 @@ const Header = () => {
         className={styles.locationPseudo}
         mainClassName={styles.location}
         padding="large"
-        hover="regular"
+        hover
       >
         <h2 className={styles.locationText}>
           Based in <br />
