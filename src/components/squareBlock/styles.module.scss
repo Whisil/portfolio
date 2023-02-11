@@ -25,14 +25,40 @@
 
 .bgColor-white{
     background-color:$white;
+
+    color: $black;
+    svg{
+        fill: $black;
+    }
 }
 
 .bgColor-lightBlack{
     background-color: $lightBlack;
 }
 
+.bgColor-darkOceanBlue{
+    background-color: $darkOceanBlue;
+}
+
 .bgColor-yellow{
     background-color: $yellow;
+}
+
+.bgColor-green{
+    background-color: $green;
+
+    color: $black;
+    svg{
+        fill: $black;
+    }
+}
+
+.bgColor-darkGrey{
+    background-color: $darkGrey;
+}
+
+.bgColor-brownBlack{
+    background-color: $brownBlack;
 }
 
 .hoverEffect{
@@ -55,17 +81,14 @@
             left: 0;
             top: 0;
             object-fit: cover;
-            transition: opacity .6s ease-out;
-            opacity: 0;
+            object-position: center;
+            transition: opacity .5s ease-out, visibility .5s ease-out;
+            visibility: hidden;
         }
     }
     &:hover{
         .transformWrapper{
             transform: scale(0.96);
-        
-            // .media{
-            //     opacity: 0.5;
-            // }
         }
 
         .hoverEffectInner{

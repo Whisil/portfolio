@@ -5,7 +5,7 @@ import styles from './styles.module.scss';
 
 const Work = () => {
   return (
-    <div className={styles.workContainer}>
+    <section className={styles.workContainer}>
       {workDb.map((item, index) => (
         <WorkItem
           key={item.name}
@@ -17,7 +17,7 @@ const Work = () => {
           index={index + 1}
         />
       ))}
-    </div>
+    </section>
   );
 };
 

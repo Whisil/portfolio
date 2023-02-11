@@ -18,7 +18,7 @@ const Header = () => {
   };
 
   return (
-    <div className={styles.header}>
+    <header className={styles.header}>
       <SquareBlock
         borderRadius={70}
         bgColor="white"
@@ -70,7 +70,7 @@ const Header = () => {
           Kyiv,Ukraine
         </h2>
       </SquareBlock>
-    </div>
+    </header>
   );
 };
 

@@ -1,13 +1,13 @@
 [
     {
-        "bgColor": "lightBlack",
+        "bgColor": "white",
         "name": "Calendar",
         "type": "showcase",
         "link": "https://calendar-nine-woad.vercel.app/",
         "imgSrc": "/images/work/calendar.mp4"
     },
     {
-        "bgColor": "lightBlack",
+        "bgColor": "brownBlack",
         "name": "Annotations app",
         "type": "showcase",
         "link": "https://annotations-app.vercel.app/",
@@ -21,21 +21,21 @@
         "imgSrc": "/images/work/kanban.mp4"
     },
     {
-        "bgColor": "lightBlack",
+        "bgColor": "darkOceanBlue",
         "name": "Crypto-vk",
         "type": "repo",
         "link": "https://github.com/Whisil/crypto-vk",
         "imgSrc": "/images/work/crypto-vk.webp"
     },
     {
-        "bgColor": "lightBlack",
+        "bgColor": "darkGrey",
         "name": "Crypto Dashboard",
         "type": "repo",
         "link": "https://github.com/Whisil/crypto-wallet-dashboard",
         "imgSrc": "/images/work/crypto-dash.webp"
     },
     {
-        "bgColor": "lightBlack",
+        "bgColor": "green",
         "name": "UPQODE",
         "type": "showcase",
         "link": "https://resplendent-haupia-0ff8ca.netlify.app/",

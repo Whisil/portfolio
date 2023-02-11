@@ -26,28 +26,26 @@ const SquareWorkBlock = ({
   media,
   containerClassName,
 }: BlockProps) => {
-  const [isStopped, setIsStopped] = useState<boolean>(false);
-  const [isVideoLoaded, setIsVideoLoaded] = useState<boolean>(false);
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
-  // const videoRef = useRef<HTMLVideoElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
-  // useEffect(() => {
-  //   if (isStopped) {
-  //     videoRef.current?.play();
-  //   } else {
-  //     videoRef.current?.stop();
-  //   }
-  // }, [isStopped]);
+  useEffect(() => {
+    if (isPlaying) {
+      videoRef.current?.play();
+    } else {
+      videoRef.current?.pause();
+    }
+  }, [isPlaying]);
 
   return (
     <a
       className={clsx(styles.workMain, hover && styles.hoverEffect)}
       href={link}
-      onMouseEnter={() => setIsStopped(true)}
-      onMouseLeave={() => {
-        setIsStopped(false);
-        setIsVideoLoaded(true);
-      }}
+      target="_blank"
+      rel="noreferrer"
+      onMouseEnter={() => setIsPlaying(true)}
+      onMouseLeave={() => setIsPlaying(false)}
     >
       <div
         className={clsx(
@@ -58,31 +56,37 @@ const SquareWorkBlock = ({
           className,
         )}
       >
-        {isStopped && (
-          <>
-            {media.includes('.mp4') ? (
-              <video
-                loop
-                muted
-                autoPlay
-                controls={false}
-                className={styles.media}
-                preload="auto"
-                onLoad={() => setIsVideoLoaded(true)}
-                style={isVideoLoaded ? { opacity: 0.5 } : { opacity: 0 }}
-              >
-                <source src={media} type="video/mp4" />
-              </video>
-            ) : (
-              <img
-                className={styles.media}
-                src={media}
-                alt={media.split('/')[3].split('.')[0]}
-                height={350}
-              />
-            )}
-          </>
+        {media.includes('.mp4') ? (
+          <video
+            loop
+            muted
+            autoPlay
+            controls={false}
+            className={styles.media}
+            preload="auto"
+            style={
+              isPlaying
+                ? { visibility: 'visible', opacity: 0.6 }
+                : { opacity: 0 }
+            }
+            ref={videoRef}
+          >
+            <source src={media} type="video/mp4" />
+          </video>
+        ) : (
+          <img
+            className={styles.media}
+            src={media}
+            alt={media.split('/')[3].split('.')[0]}
+            height={350}
+            style={
+              isPlaying
+                ? { visibility: 'visible', opacity: 0.6 }
+                : { opacity: 0 }
+            }
+          />
         )}
+
         <div
           className={clsx(
             containerClassName,
