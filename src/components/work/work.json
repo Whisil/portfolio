@@ -4,21 +4,21 @@
         "name": "Calendar",
         "type": "showcase",
         "link": "https://calendar-nine-woad.vercel.app/",
-        "imgSrc": "/images/work/calendar.webp"
+        "imgSrc": "/images/work/calendar.mp4"
     },
     {
         "bgColor": "lightBlack",
         "name": "Annotations app",
         "type": "showcase",
         "link": "https://annotations-app.vercel.app/",
-        "imgSrc": "/images/work/annotations-app.webp"
+        "imgSrc": "/images/work/annotations.mp4"
     },
     {
         "bgColor": "lightBlack",
         "name": "Kanban",
         "type": "showcase",
         "link": "https://github-kanban-board.vercel.app/",
-        "imgSrc": "/images/work/github-kanban.webp"
+        "imgSrc": "/images/work/kanban.mp4"
     },
     {
         "bgColor": "lightBlack",
@@ -39,6 +39,6 @@
         "name": "UPQODE",
         "type": "showcase",
         "link": "https://resplendent-haupia-0ff8ca.netlify.app/",
-        "imgSrc": "/images/work/UPQODE.webp"
+        "imgSrc": "/images/work/upqode.mp4"
     }
 ]

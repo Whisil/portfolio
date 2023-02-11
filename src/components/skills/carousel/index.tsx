@@ -8,7 +8,7 @@ const CarouselItem = () => {
     <>
       {imageDb.map(({ src, alt }) => (
         <span className={styles.carouselItem} key={alt}>
-          <img src={src} alt={alt} />
+          <img src={src} alt={alt} height={350} width={350} />
         </span>
       ))}
     </>

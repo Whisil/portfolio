@@ -50,6 +50,8 @@ const Header = () => {
                 src="/images/me.jpg"
                 alt="Tokyo Tower"
                 ref={hiddenImageRef}
+                width={250}
+                height={250}
               />
             </span>
           </span>
