@@ -10,7 +10,12 @@ const ContactForm = () => {
           placeholder="Name"
           className={styles.input}
         />
-        <input type="email" placeholder="E-mail" className={styles.input} />
+        <input
+          name="email"
+          type="email"
+          placeholder="E-mail"
+          className={styles.input}
+        />
       </div>
 
       <textarea
@@ -19,6 +24,9 @@ const ContactForm = () => {
         placeholder="Message"
         className={styles.textarea}
       />
+      <button className={styles.submitBtn}>
+        Send <img src="/images/icons/send.svg" width={32} height={32} alt="" />
+      </button>
     </form>
   );
 };

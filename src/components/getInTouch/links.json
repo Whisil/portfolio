@@ -1,10 +1,5 @@
 [
     {
-        "text": "GitHub",
-        "link": "https://github.com/Whisil",
-        "icon": "/images/icons/github.svg"
-    },
-    {
         "text": "LinkedIn",
         "link": "https://www.linkedin.com/in/david-haidamaka/",
         "icon": "/images/icons/linkedin.svg"
@@ -13,5 +8,10 @@
         "text": "Telegram",
         "link": "https://t.me/whisil",
         "icon": "/images/icons/telegram.svg"
+    },
+    {
+        "text": "GitHub",
+        "link": "https://github.com/Whisil",
+        "icon": "/images/icons/github.svg"
     }
 ]

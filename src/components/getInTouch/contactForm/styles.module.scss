@@ -8,6 +8,12 @@
     padding: 40px 60px;
     border-radius: 75px;
     border: 3px solid $yellow;
+    transition: transform .3s ease-out;
+    font-size: 22px;
+
+    &:focus{
+        transform: scale(0.98);
+    }
 }
 
 @mixin placeholder{
@@ -27,14 +33,11 @@
 
         .input{
             @include default;
-            font-size: 18px;
             font-weight: 500;
-            
-
+            width: 100%;
             &::placeholder{
                 @include placeholder;
             }
-            
         }
 
     }
@@ -43,8 +46,8 @@
         resize: none;
         width: 100%;
         @include default;
-        font-size: 22px;
         background-color: transparent;
+        margin-bottom: 20px;
 
         &::placeholder{
             @include placeholder;
@@ -56,6 +59,40 @@
 
         &:focus-visible{
             outline: none;
+            transform: scale(0.98);
+        }
+    }
+
+    .submitBtn{
+        position: relative;
+        font-size: 32px;
+        font-weight: bold;
+        border-radius: 75px;
+        padding: 20px 30px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+        cursor: pointer;
+        background-color: $yellow;
+        color: $black;
+        align-self: flex-end;
+        transition: transform .6s ease;
+
+        img{
+            transition: transform .6s ease-out;
+        }
+
+        &:hover{
+            transform: scale(1.02);
+            img{
+                transform: translateX(10px);
+            }
+        }
+
+        &:active{
+            transform: scale(0.98);
         }
     }
 }

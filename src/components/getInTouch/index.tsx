@@ -14,7 +14,7 @@ const GetInTouch = () => {
       bgColor="darkYellow"
     >
       <div>
-        <h1 className={styles.heading}>Get in touch.</h1>
+        <h1 className={styles.heading}>Get in touch!</h1>
         <ul>
           {linksDb.map((item) => (
             <Link text={item.text} link={item.link} icon={item.icon} />
