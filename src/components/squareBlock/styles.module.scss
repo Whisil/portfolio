@@ -15,10 +15,6 @@
     padding: 70px;
 }
 
-.padding-xl{
-    padding: 180px;
-}
-
 .padding-none{
     padding: 0;
 }
@@ -42,6 +38,11 @@
 
 .bgColor-yellow{
     background-color: $yellow;
+}
+
+.bgColor-darkYellow{
+    background-color: $darkYellow;
+    color: $linksYellow;
 }
 
 .bgColor-green{

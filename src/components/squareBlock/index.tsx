@@ -8,7 +8,7 @@ interface SquareBlockProps {
   mainClassName?: string;
   bgColor?: string;
   children?: React.ReactNode;
-  padding: 'md' | 'large' | 'xl' | 'none';
+  padding: 'md' | 'large' | 'none';
   hover?: boolean;
   onMouseMove?: (e: React.MouseEvent) => void;
   containerClassName?: string;
