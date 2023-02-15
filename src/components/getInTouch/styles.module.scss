@@ -1,8 +1,9 @@
 
 .getInTouch{
     display: grid;
-    grid-template-columns: 0.6fr 1.4fr;
-    gap: 40px;
+    grid-template-columns: 1.4fr 0.6fr ;
+    gap: 60px;
+    align-items: center;
 }
 
 .heading{
@@ -11,16 +12,23 @@
     color: #fff;
 }
 
+.links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    align-items: start;
+}
 .item{
     display: flex;
     align-items: center;
-    margin-bottom: 40px;
+    // margin-bottom: 40px;
 
     img{
         display: inline;
         width: 80px;
         height: 80px;
-        margin-right: 40px;
+        margin-right: 20px;
     }
 
     &Title{

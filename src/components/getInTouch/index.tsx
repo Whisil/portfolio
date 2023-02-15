@@ -7,21 +7,16 @@ import ContactForm from './contactForm';
 
 const GetInTouch = () => {
   return (
-    <SquareBlock
-      containerClassName={styles.getInTouch}
-      borderRadius={70}
-      padding="large"
-      bgColor="darkYellow"
-    >
-      <div>
-        <h1 className={styles.heading}>Get in touch!</h1>
-        <ul>
+    <SquareBlock borderRadius={70} padding="large" bgColor="darkYellow">
+      <h1 className={styles.heading}>Get in touch!</h1>
+      <div className={styles.getInTouch}>
+        <ContactForm />
+        <ul className={styles.links}>
           {linksDb.map((item) => (
             <Link text={item.text} link={item.link} icon={item.icon} />
           ))}
         </ul>
       </div>
-      <ContactForm />
     </SquareBlock>
   );
 };
