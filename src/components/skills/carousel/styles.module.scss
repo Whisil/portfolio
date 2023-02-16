@@ -9,9 +9,9 @@ $itemSize: 350px;
     pointer-events: none;
 
     &Track{
+        will-change: transform;
         animation: 25s linear 0s scroll infinite;
         display: flex;
-        will-change: transform;
         gap: 20px;
         align-items: center;
         width: calc(#{$itemSize} * (#{$itemsCount} * 2) + 40px * #{$itemsCount});
@@ -43,9 +43,9 @@ $itemSize: 350px;
 
 @keyframes scroll {
 	from {
-        transform: translateX(0); 
+        transform: translate3d(0); 
     }
 	to {
-        transform: translateX(calc(-#{$itemSize} * #{$itemsCount} - 20px * #{$itemsCount}))
+        transform: translate3d(calc(-#{$itemSize} * #{$itemsCount} - 20px * #{$itemsCount}), 0, 0)
     }
 }

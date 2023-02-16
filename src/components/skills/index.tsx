@@ -1,14 +1,22 @@
 import clsx from 'clsx';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import SquareBlock from '../squareBlock';
 import Carousel from './carousel';
 import styles from './styles.module.scss';
 
 const Skills = () => {
-  const [scroll, setScroll] = useState(window.scrollY);
+  const textRef = useRef<HTMLHeadingElement>(null);
+  const textSecRef = useRef<HTMLHeadingElement>(null);
 
   const handleScroll = () => {
-    setScroll(window.scrollY);
+    if (textRef && textRef.current && textSecRef && textSecRef.current) {
+      textRef.current.style.transform = `translate3d(${
+        window.scrollY * 0.25
+      }px, 0, 0)`;
+      textSecRef.current.style.transform = `translate3d(-${
+        window.scrollY * 0.33
+      }px, 0, 0)`;
+    }
   };
 
   useEffect(() => {
@@ -26,16 +34,10 @@ const Skills = () => {
       mainClassName={styles.techContainer}
     >
       <div className={styles.heading}>
-        <h1
-          className={styles.crtText}
-          style={{ transform: `translateX(${scroll * 0.25}px)` }}
-        >
+        <h1 ref={textRef} className={styles.crtText}>
           Front-End
         </h1>
-        <h1
-          className={styles.crtText}
-          style={{ transform: `translateX(-${scroll * 0.25}px)` }}
-        >
+        <h1 ref={textSecRef} className={styles.crtText}>
           Developer
         </h1>
       </div>

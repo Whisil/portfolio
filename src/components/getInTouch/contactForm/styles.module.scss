@@ -66,8 +66,6 @@
 
     .submitBtn{
         position: relative;
-        font-size: 32px;
-        font-weight: bold;
         border-radius: 75px;
         padding: 20px 30px;
         width: 100%;
@@ -77,9 +75,14 @@
         align-items: center;
         cursor: pointer;
         background-color: $yellow;
-        color: $black;
         align-self: flex-end;
         transition: transform .6s ease;
+
+        &Text{
+            font-size: 32px;
+            font-weight: bold;
+            color: $black;
+        }
 
         img{
             transition: transform .6s ease-out;

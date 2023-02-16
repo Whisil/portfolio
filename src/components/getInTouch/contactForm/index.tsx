@@ -25,7 +25,8 @@ const ContactForm = () => {
         className={styles.textarea}
       />
       <button className={styles.submitBtn}>
-        Send <img src="/images/icons/send.svg" width={32} height={32} alt="" />
+        <span className={styles.submitBtnText}>Send</span>
+        <img src="/images/icons/send.svg" width={32} height={32} alt="" />
       </button>
     </form>
   );

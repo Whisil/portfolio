@@ -1,9 +1,9 @@
 import SquareBlock from '../squareBlock';
 import linksDb from './links.json';
 import Link from './link';
+import ContactForm from './contactForm';
 
 import styles from './styles.module.scss';
-import ContactForm from './contactForm';
 
 const GetInTouch = () => {
   return (
@@ -13,7 +13,12 @@ const GetInTouch = () => {
         <ContactForm />
         <ul className={styles.links}>
           {linksDb.map((item) => (
-            <Link text={item.text} link={item.link} icon={item.icon} />
+            <Link
+              key={item.text}
+              text={item.text}
+              link={item.link}
+              icon={item.icon}
+            />
           ))}
         </ul>
       </div>

@@ -17,12 +17,11 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    align-items: start;
+    align-items: flex-start;
 }
 .item{
     display: flex;
     align-items: center;
-    // margin-bottom: 40px;
 
     img{
         display: inline;
