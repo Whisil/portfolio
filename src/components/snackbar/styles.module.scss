@@ -12,6 +12,9 @@
     text-align: center;
     border-radius: 15px;
     overflow: hidden;
+    background-color: $successBg;
+    animation: .5s 0s ease-out appear,
+                .5s 4.5s ease-out disappear; 
 
     &Inner{
         position: relative;
@@ -19,6 +22,7 @@
         font-weight: 600;
         display: flex;
         align-items: center;
+        color: $successGreen;
         gap: 15px;
     }
 
@@ -41,8 +45,8 @@
         height: 6px;
         bottom: 0;
         left: 0;
-        background-color: $errorRed;
-        animation: barSlide 5s linear;
+        background-color: $successGreen;
+        animation: barSlide 4.5s linear;
     }
 }
 
@@ -53,6 +57,10 @@
         color: $errorRed;
         margin-bottom: 10px;
     }
+
+    &::before{
+        background-color: $errorRed;
+    }
 }
 
 @keyframes barSlide{
@@ -61,5 +69,29 @@
     }
     to{
         width: 100%;
+    }
+}
+
+@keyframes appear{
+    0%{
+        transform: scale(0.8);
+    }
+    60%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes disappear{
+    0%{
+        transform: scale(1);
+    }
+    40%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(0)
     }
 }

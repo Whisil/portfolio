@@ -3,9 +3,14 @@ import ReactDOM from 'react-dom';
 
 import styles from './styles.module.scss';
 
-const Snackbar = ({ type }: { type?: 'Error' }) => {
+const Snackbar = ({ type }: { type?: 'Error' | 'OK' | '' }) => {
   return ReactDOM.createPortal(
-    <div className={clsx(styles.snackbar, type === 'Error' && styles.error)}>
+    <div
+      className={clsx(
+        styles.snackbar,
+        type === 'Error' ? styles.error : styles.success,
+      )}
+    >
       {type === 'Error' ? (
         <>
           <span className={styles.snackbarInner}>

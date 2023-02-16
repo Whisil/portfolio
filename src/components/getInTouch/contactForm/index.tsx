@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 import styles from './styles.module.scss';
 import Snackbar from '../../snackbar';
 
 const ContactForm = () => {
-  const [showModal, setShowModal] = useState<boolean>(false);
+  const [modalType, setModalType] = useState<'Error' | 'OK' | ''>('');
 
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -19,20 +19,17 @@ const ContactForm = () => {
         formRef.current!,
         process.env.REACT_APP_EMAIL_PUBLIC_KEY as string,
       )
-      .then((res) => {
-        console.log(res);
-        setShowModal(() => true);
-        setTimeout(() => setShowModal(false), 5000);
+      .then(() => {
+        setModalType(() => 'OK');
+        setTimeout(() => setModalType(() => ''), 5000);
         formRef.current!.reset();
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+        setModalType(() => 'Error');
+        setTimeout(() => setModalType(() => ''), 5000);
+      });
   };
-
-  // useEffect(() => {
-  //   let timer = setTimeout(() => setShowModal(true), 3500);
-
-  //   return () => clearTimeout(timer);
-  // }, []);
 
   return (
     <>
@@ -63,7 +60,7 @@ const ContactForm = () => {
         </button>
       </form>
 
-      <Snackbar type="Error" />
+      {modalType.length !== 0 && <Snackbar type={modalType} />}
     </>
   );
 };
