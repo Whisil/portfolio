@@ -1,17 +1,39 @@
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
 import styles from './styles.module.scss';
 
 const ContactForm = () => {
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAIL_SERVICE_ID as string,
+        process.env.REACT_APP_EMAIL_TEMPLATE_ID as string,
+        formRef.current!,
+        process.env.REACT_APP_EMAIL_PUBLIC_KEY as string,
+      )
+      .then((res) => {
+        console.log(res);
+        formRef.current!.reset();
+      })
+      .catch((err) => console.log(err));
+  };
+
   return (
-    <form className={styles.form}>
+    <form className={styles.form} onSubmit={handleSubmit} ref={formRef}>
       <div className={styles.formUpper}>
         <input
-          name="name"
+          name="user_name"
           type="text"
           placeholder="Name"
           className={styles.input}
         />
         <input
-          name="email"
+          name="user_email"
           type="email"
           placeholder="E-mail"
           className={styles.input}
@@ -19,12 +41,11 @@ const ContactForm = () => {
       </div>
 
       <textarea
-        name=""
-        id=""
+        name="message"
         placeholder="Message"
         className={styles.textarea}
       />
-      <button className={styles.submitBtn}>
+      <button className={styles.submitBtn} type="submit">
         <span className={styles.submitBtnText}>Send</span>
         <img src="/images/icons/send.svg" width={32} height={32} alt="" />
       </button>

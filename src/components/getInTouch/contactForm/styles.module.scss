@@ -48,7 +48,7 @@
         @include default;
         background-color: transparent;
         margin-bottom: 20px;
-        min-height: 200px;
+        min-height: 300px;
 
         &::placeholder{
             @include placeholder;
