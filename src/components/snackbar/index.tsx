@@ -20,7 +20,7 @@ const Snackbar = ({ type }: { type?: 'Error' | 'OK' | '' }) => {
               height={32}
               alt="error"
             />
-            Error, send your email here:
+            Error. Send your email here:
           </span>
           <a
             href="mailto:electromandarin@gmail.com"

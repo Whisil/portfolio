@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser';
 
 import styles from './styles.module.scss';
 import Snackbar from '../../snackbar';
-import { useForm } from 'react-hook-form';
+import { FieldValues, useForm } from 'react-hook-form';
 import clsx from 'clsx';
 
 const ContactForm = () => {
@@ -17,18 +17,15 @@ const ContactForm = () => {
   console.log(errors);
   const formRef = useRef<HTMLFormElement>(null);
 
-  const handleSubmitMain = (data: any, e: any) => {
+  const handleSubmitMain = (data: Object, e: any) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        // process.env.REACT_APP_EMAIL_SERVICE_ID as string,
-        // process.env.REACT_APP_EMAIL_TEMPLATE_ID as string,
-        'f',
-        'ff',
+        process.env.REACT_APP_EMAIL_SERVICE_ID as string,
+        process.env.REACT_APP_EMAIL_TEMPLATE_ID as string,
         formRef.current!,
-        'sss',
-        // process.env.REACT_APP_EMAIL_PUBLIC_KEY as string,
+        process.env.REACT_APP_EMAIL_PUBLIC_KEY as string,
       )
       .then(() => {
         setModalType(() => 'OK');
