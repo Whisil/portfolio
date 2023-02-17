@@ -3,56 +3,81 @@ import emailjs from '@emailjs/browser';
 
 import styles from './styles.module.scss';
 import Snackbar from '../../snackbar';
+import { useForm } from 'react-hook-form';
+import clsx from 'clsx';
 
 const ContactForm = () => {
   const [modalType, setModalType] = useState<'Error' | 'OK' | ''>('');
 
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm();
+  console.log(errors);
   const formRef = useRef<HTMLFormElement>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmitMain = (data: any, e: any) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        process.env.REACT_APP_EMAIL_SERVICE_ID as string,
-        process.env.REACT_APP_EMAIL_TEMPLATE_ID as string,
+        // process.env.REACT_APP_EMAIL_SERVICE_ID as string,
+        // process.env.REACT_APP_EMAIL_TEMPLATE_ID as string,
+        'f',
+        'ff',
         formRef.current!,
-        process.env.REACT_APP_EMAIL_PUBLIC_KEY as string,
+        'sss',
+        // process.env.REACT_APP_EMAIL_PUBLIC_KEY as string,
       )
       .then(() => {
         setModalType(() => 'OK');
-        setTimeout(() => setModalType(() => ''), 5000);
+        setTimeout(() => setModalType(() => ''), 4900);
         formRef.current!.reset();
       })
       .catch((err) => {
         console.log(err);
         setModalType(() => 'Error');
-        setTimeout(() => setModalType(() => ''), 5000);
+        setTimeout(() => setModalType(() => ''), 4900);
       });
   };
 
   return (
     <>
-      <form className={styles.form} onSubmit={handleSubmit} ref={formRef}>
+      <form
+        className={styles.form}
+        onSubmit={handleSubmit(handleSubmitMain)}
+        ref={formRef}
+      >
         <div className={styles.formUpper}>
           <input
-            name="user_name"
+            {...register('user_name', { required: true })}
             type="text"
             placeholder="Name"
-            className={styles.input}
+            className={clsx(
+              styles.input,
+              errors.user_name && styles.inputError,
+            )}
           />
           <input
-            name="user_email"
+            {...register('user_email', {
+              required: true,
+              pattern:
+                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+            })}
             type="email"
             placeholder="E-mail"
-            className={styles.input}
+            className={clsx(
+              styles.input,
+              errors.user_email && styles.inputError,
+            )}
           />
         </div>
 
         <textarea
-          name="message"
+          {...register('message', { required: true })}
           placeholder="Message"
-          className={styles.textarea}
+          className={clsx(styles.textarea, errors.message && styles.inputError)}
         />
         <button className={styles.submitBtn} type="submit">
           <span className={styles.submitBtnText}>Send</span>

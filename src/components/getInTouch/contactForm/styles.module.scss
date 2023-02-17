@@ -8,7 +8,8 @@
     padding: 40px 60px;
     border-radius: 75px;
     border: 3px solid $yellow;
-    transition: transform .3s ease-out;
+    transition: transform .3s ease-out, 
+                border-color .3s ease;
     font-size: 22px;
 
     &:focus{
@@ -40,6 +41,8 @@
             }
         }
 
+        
+
     }
 
     .textarea{
@@ -63,7 +66,9 @@
             transform: scale(0.98);
         }
     }
-
+    .inputError{
+        border-color: $errorRed;
+    }
     .submitBtn{
         position: relative;
         border-radius: 75px;
