@@ -1,3 +1,4 @@
+import Footer from './components/footer';
 import GetInTouch from './components/getInTouch';
 import Header from './components/header';
 import Skills from './components/skills';
@@ -11,6 +12,7 @@ function App() {
       <Skills />
       <Work />
       <GetInTouch />
+      <Footer />
     </div>
   );
 }
