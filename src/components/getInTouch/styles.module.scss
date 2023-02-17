@@ -1,3 +1,5 @@
+@import '../../styles/colors.scss';
+
 .contact{
     margin-bottom: 20px;
 }
@@ -12,7 +14,7 @@
 .heading{
     font-size: 72px;
     margin-bottom: 50px;
-    color: #fff;
+    color: $white;
 }
 
 .links{
@@ -24,24 +26,34 @@
 .item{
     display: flex;
     align-items: center;
-    &:not(:last-child){
-        margin-bottom: 40px;
-    }
-
+    margin-bottom: 40px;
+    
     img{
         display: inline;
         width: 80px;
         height: 80px;
         margin-right: 20px;
+        transition: transform .4s ease;
     }
 
     &Title{
+        position: relative;
         font-size: 76px;
         font-weight: bold;
-        margin-right: 20px;
+        line-height: 1;
+        display: flex;
+        gap: 10px;
+
+        svg{
+            display: inline-block;
+            margin-bottom: 7px;
+            align-self: flex-end;
+        }
     }
 
-    svg{
-        align-self: flex-end;
+    &:hover{
+        img{
+            transform: scale(1.08);
+        }
     }
 }
