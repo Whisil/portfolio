@@ -40,9 +40,6 @@
                 @include placeholder;
             }
         }
-
-        
-
     }
 
     .textarea{
@@ -66,9 +63,11 @@
             transform: scale(0.98);
         }
     }
+
     .inputError{
         border-color: $errorRed;
     }
+
     .submitBtn{
         position: relative;
         border-radius: 75px;
