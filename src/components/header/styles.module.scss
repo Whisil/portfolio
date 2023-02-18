@@ -1,5 +1,55 @@
 @import '../../styles/colors.scss';
 
+@mixin biggerImage{
+    .nameTextHidden{
+        clip-path: circle(125px at var(--x) var(--y));
+    }
+
+    .imageContainer{
+        top: -75px;
+        left: -75px;
+        width: 250px;
+        height: 250px;
+    }
+
+    .imageInner{
+        top: -125px;
+        left: -125px;
+        width: 250px;
+        height: 250px;
+    }
+
+    .nameImage{
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@mixin smallerImage{
+    .nameTextHidden{
+        clip-path: circle(100px at var(--x) var(--y));
+    }
+
+    .imageContainer{
+        top: -75px;
+        left: -75px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .imageInner{
+        top: -100px;
+        left: -100px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .nameImage{
+        width: 200px;
+        height: 200px;
+    }
+}
+
 @mixin textStyles {
     color: $black;
     font-family: Disket;
@@ -7,7 +57,48 @@
     font-weight: 700;
     cursor: default;
     transition: transform .6s ease;
+
+    @media screen and (min-width: 2000px){
+        font-size: 84px;
+    }
+
+    @media screen and (max-width: 1500px) {
+        font-size: 64px;
+    }
+
+    @media screen and (max-width: 1320px) {
+        font-size: 54px;
+    }
+
+    @media screen and (max-width: 1180px) {
+        font-size: 42px;
+    }
+
+    @media screen and (max-width: 992px) {
+        font-size: 72px;
+    }
+
+    @media screen and (max-width: 870px) {
+        font-size: 64px;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 54px;
+    }
+
+    @media screen and (max-width: 660px) {
+        font-size: 42px;
+    }
+
+    @media screen and (max-width: 548px) {
+        font-size: 32px;
+    }
+    @media screen and (max-width: 418px){
+        font-size: 28px;
+    }
 }
+
+
 
 .header{
     padding-top: 10px;
@@ -21,6 +112,14 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     margin-bottom: 10px;
+
+    @media screen and (min-width: 2000px){
+        padding-top: 20px;
+    }
+
+    @media screen and (max-width: 992px){
+        display: block;
+    }
 
     .name{
         grid-area: name;
@@ -89,6 +188,43 @@
                 }
             }
         }
+
+        @media screen and (max-width: 1280px){
+            @include smallerImage;
+        }
+
+        @media screen and (max-width: 992px){
+            @include biggerImage
+        }
+
+        @media screen and (max-width: 768px){
+            @include smallerImage;
+        }
+
+        @media screen and (max-width: 568px){
+            .nameTextHidden{
+                clip-path: circle(75px at var(--x) var(--y));
+            }
+        
+            .imageContainer{
+                top: -75px;
+                left: -75px;
+                width: 150px;
+                height: 150px;
+            }
+        
+            .imageInner{
+                top: -75px;
+                left: -75px;
+                width: 150px;
+                height: 150px;
+            }
+        
+            .nameImage{
+                width: 150px;
+                height: 150px;
+            }
+        }
     }
 
     .location{
@@ -104,6 +240,27 @@
         }
     }
     
+    @media screen and (max-width: 992px){
+        .name{
+            width: 85vw;
+            margin-left: 0;
+            margin-right: auto;
+            margin-bottom: 20px;
+        }
+
+        .location{
+            width: 85vw;
+            margin-right: 0;
+            margin-left: auto;
+        }
+    }
+
+    @media screen and (max-width: 346px){
+        .name, .location{
+            width: 100%;
+        }
+    }
+
     .locationPseudo{
         overflow: hidden;
         &::before{
