@@ -48,6 +48,14 @@
         background-color: $successGreen;
         animation: barSlide 4.5s linear;
     }
+
+    @media screen and (max-width: 460px){
+        padding: 20px;
+        &Inner{
+            font-size: 20px;
+            gap: 10px;
+        }
+    }
 }
 
 .error{

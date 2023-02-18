@@ -83,6 +83,7 @@ const ContactForm = () => {
       </form>
 
       {modalType.length !== 0 && <Snackbar type={modalType} />}
+      <Snackbar type={modalType} />
     </>
   );
 };
