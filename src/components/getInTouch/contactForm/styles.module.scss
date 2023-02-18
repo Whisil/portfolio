@@ -23,12 +23,21 @@
     @media screen and (max-width: 740px){
         padding: 30px 40px;
     }
+
+    @media screen and (min-width: 2000px){
+        padding: 60px 80px;
+        font-size: 32px;
+    }
 }
 
 @mixin placeholder{
     color: $yellow;
     font-size: 22px;
     font-weight: bold;
+
+    @media screen and (min-width: 2000px){
+        font-size: 32px;
+    }
 }
 
 .form{
@@ -67,6 +76,10 @@
         background-color: transparent;
         margin-bottom: 20px;
         min-height: 300px;
+
+        @media screen and (min-width: 2000px){
+            min-height: 400px;
+        }
 
         @media screen and (max-width: 1080px){
             padding: 40px;
@@ -108,20 +121,29 @@
         cursor: pointer;
         background-color: $yellow;
         align-self: flex-end;
-        transition: transform .6s ease;
+        transition: transform .6s ease, background-color .3s ease;
 
         &Text{
             font-size: 32px;
             font-weight: bold;
             color: $black;
+
+            @media screen and (min-width: 2000px){
+                font-size: 42px;
+            }
         }
 
         img{
             transition: transform .6s ease-out;
+            @media screen and (min-width: 2000px){
+                width: 42px;
+                height: 42px;
+            }
         }
 
         &:hover{
             transform: scale(1.02);
+            background-color: $linksYellow;
             img{
                 transform: translateX(10px);
             }
