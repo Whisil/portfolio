@@ -8,7 +8,12 @@ import styles from './styles.module.scss';
 const GetInTouch = () => {
   return (
     <section className={styles.contact}>
-      <SquareBlock borderRadius={70} padding="large" bgColor="darkYellow">
+      <SquareBlock
+        className={styles.contactWrapper}
+        borderRadius={70}
+        padding="large"
+        bgColor="darkYellow"
+      >
         <h1 className={styles.heading}>Get in touch!</h1>
         <div className={styles.getInTouch}>
           <ContactForm />

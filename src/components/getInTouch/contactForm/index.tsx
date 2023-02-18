@@ -1,9 +1,9 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 import styles from './styles.module.scss';
 import Snackbar from '../../snackbar';
-import { FieldValues, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import clsx from 'clsx';
 
 const ContactForm = () => {
