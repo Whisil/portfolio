@@ -1,5 +1,9 @@
 $itemsCount: 14;
 $itemSize: 350px;
+$itemSize1500: 275px;
+$itemSize1240: 200px;
+$itemSize780: 150px;
+$itemSize440: 100px;
 
 .carousel{
     width: 130%;
@@ -15,6 +19,26 @@ $itemSize: 350px;
         gap: 20px;
         align-items: center;
         width: calc(#{$itemSize} * (#{$itemsCount} * 2) + 40px * #{$itemsCount});
+    
+        @media screen and (max-width: 1500px){
+            width: calc(#{$itemSize1500} * (#{$itemsCount} * 2) + 40px * #{$itemsCount});
+        }
+
+        @media screen and (max-width: 1240px){
+            width: calc(#{$itemSize1240} * (#{$itemsCount} * 2) + 40px * #{$itemsCount});
+        }
+
+        @media screen and (max-width: 780px){
+            width: calc(#{$itemSize780} * (#{$itemsCount} * 2) + 40px * #{$itemsCount});
+        }
+
+        @media screen and (max-width: 440px){
+            width: calc(#{$itemSize440} * (#{$itemsCount} * 2) + 40px * #{$itemsCount});
+        }
+    }
+
+    @media screen and (max-width: 440px){
+        width: 150%;
     }
 }
 
@@ -22,6 +46,14 @@ $itemSize: 350px;
     margin-top: 60px;
     .carouselTrack{
         animation-direction: reverse;
+    }
+
+    @media screen and (max-width: 1240px){
+        margin-top: 30px;
+    }
+
+    @media screen and (max-width: 780px){
+        margin-top: 15px;
     }
 }
 
@@ -31,21 +63,83 @@ $itemSize: 350px;
     display: flex;
     align-items: center;
     
+    @media screen and (max-width: 1500px){
+        width: $itemSize1500;
+        height: $itemSize1500;
+    }
+
+    @media screen and (max-width: 1240px){
+        width: $itemSize1240;
+        height: $itemSize1240;
+    }
+
+    @media screen and (max-width: 780px){
+        width: $itemSize780;
+        height: $itemSize780;
+    }
+
+    @media screen and (max-width: 440px){
+        width: $itemSize440;
+        height: $itemSize440;
+    }
 
     img{
         max-width: 90%;
         height: auto;
         max-height: 100%;
         margin: 0 auto;
-
     }
 }
 
 @keyframes scroll {
-	from {
+    from {
         transform: translate3d(0); 
     }
-	to {
-        transform: translate3d(calc(-#{$itemSize} * #{$itemsCount} - 20px * #{$itemsCount}), 0, 0)
+    to {
+        transform: translate3d(calc(-#{$itemSize} * #{$itemsCount} - 20px * #{$itemsCount}), 0, 0);
+    }
+}
+
+@media screen and (max-width: 1500px){
+    @keyframes scroll {
+        from {
+            transform: translate3d(0); 
+        }
+        to {
+            transform: translate3d(calc(-#{$itemSize1500} * #{$itemsCount} - 20px * #{$itemsCount}), 0, 0);
+        }
+    }
+}
+
+@media screen and (max-width: 1240px){
+    @keyframes scroll {
+        from {
+            transform: translate3d(0); 
+        }
+        to {
+            transform: translate3d(calc(-#{$itemSize1240} * #{$itemsCount} - 20px * #{$itemsCount}), 0, 0);
+        }
+    }
+}
+
+@media screen and (max-width: 780px){
+    @keyframes scroll {
+        from {
+            transform: translate3d(0); 
+        }
+        to {
+            transform: translate3d(calc(-#{$itemSize780} * #{$itemsCount} - 20px * #{$itemsCount}), 0, 0);
+        }
+    }
+}
+
+@media screen and (max-width: 440px){
+    @keyframes scroll {
+        from {
+            transform: translate3d(0); 
+        }
+        to {
+            transform: translate3d(calc(-#{$itemSize440} * #{$itemsCount} - 20px * #{$itemsCount}), 0, 0);
+        }
     }
 }
