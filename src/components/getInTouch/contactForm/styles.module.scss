@@ -50,7 +50,6 @@
 
     &Upper{
         display: flex;
-        gap: 20px;
         margin-bottom: 20px;
 
         .input{
@@ -60,12 +59,15 @@
             &::placeholder{
                 @include placeholder;
             }
+
+            &:first-child{
+                margin-bottom: 20px;
+            }
         }
 
         @media screen and (max-width: 740px){
-            gap: 15px;
             flex-direction: column;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
     }
 

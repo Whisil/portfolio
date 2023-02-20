@@ -245,7 +245,7 @@
             width: 85vw;
             margin-left: 0;
             margin-right: auto;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
         .location{
@@ -315,7 +315,7 @@
         padding: 40px 30px;
     }
 
-    @media screen and (max-width: 346px){
-        padding: 40px 20px;
+    @media screen and (max-width: 400px){
+        padding: 30px 20px;
     }
 }

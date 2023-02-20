@@ -25,6 +25,10 @@
         height: 450px;
     }
 
+    @media screen and (max-width: 400px){
+        height: 250px;
+    }
+
     &Container{
         height: 100%;
         display: flex;
