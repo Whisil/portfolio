@@ -9,12 +9,15 @@ const Skills = () => {
   const textSecRef = useRef<HTMLHeadingElement>(null);
 
   const handleScroll = () => {
+    let firstLineSpeed = window.innerWidth > 550 ? 0.25 : 0.15;
+    let secondLineSpeed = window.innerWidth > 550 ? 0.4 : 0.17;
+
     if (textRef && textRef.current && textSecRef && textSecRef.current) {
       textRef.current.style.transform = `translate3d(${
-        window.scrollY * 0.25
+        window.scrollY * firstLineSpeed
       }px, 0, 0)`;
       textSecRef.current.style.transform = `translate3d(-${
-        window.scrollY * 0.33
+        window.scrollY * secondLineSpeed
       }px, 0, 0)`;
     }
   };

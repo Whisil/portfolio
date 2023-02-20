@@ -90,11 +90,8 @@
         font-size: 42px;
     }
 
-    @media screen and (max-width: 548px) {
+    @media screen and (max-width: 450px){
         font-size: 32px;
-    }
-    @media screen and (max-width: 418px){
-        font-size: 28px;
     }
 }
 
@@ -255,7 +252,7 @@
         }
     }
 
-    @media screen and (max-width: 346px){
+    @media screen and (max-width: 550px){
         .name, .location{
             width: 100%;
         }
