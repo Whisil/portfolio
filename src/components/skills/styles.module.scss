@@ -2,12 +2,12 @@
 
 .techContainer{
     margin-bottom: 10px;
-    overflow: hidden;
 }
 
 .tech{
     overflow: hidden;
     position: relative;
+    isolation: isolate;
     
     &::before{
         content: "";
