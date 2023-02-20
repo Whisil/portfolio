@@ -2,6 +2,7 @@
 
 .techContainer{
     margin-bottom: 10px;
+    overflow: hidden;
 }
 
 .tech{
@@ -25,8 +26,14 @@
         cursor: default;
     }
 
+    &ZIndex{
+        position: relative;
+        z-index: 1;
+    }
+
     .heading{
         margin: 40px 0;
+        overflow: hidden;
         .crtText{
             font-size: 10vw;
             font-family: Press-Start-2P;

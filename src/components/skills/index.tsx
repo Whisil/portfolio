@@ -34,6 +34,7 @@ const Skills = () => {
       bgColor="lightBlack"
       padding="none"
       className={styles.tech}
+      containerClassName={styles.techZIndex}
       mainClassName={styles.techContainer}
     >
       <div className={styles.heading}>
