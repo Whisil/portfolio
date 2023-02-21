@@ -61,7 +61,14 @@
             }
 
             &:first-child{
-                margin-bottom: 20px;
+                margin-right: 20px;
+            }
+
+            @media screen and (max-width: 740px){
+                &:first-child{
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                }
             }
         }
 
