@@ -23,7 +23,7 @@ const Footer = () => {
 
       <div className={styles.jobStatus}>
         <span className={styles.jobStatusDot} />
-        <span className={styles.jobStatusText}>Looking for a job</span>
+        <span className={styles.jobStatusText}>Passive job search</span>
       </div>
 
       <span className={styles.upArrow} onClick={handleScrollUp}>

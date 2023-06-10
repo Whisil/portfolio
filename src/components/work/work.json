@@ -23,8 +23,8 @@
     {
         "bgColor": "darkOceanBlue",
         "name": "Crypto-vk",
-        "type": "repo",
-        "link": "https://github.com/Whisil/crypto-vk",
+        "type": "showcase",
+        "link": "https://crypto-vk.vercel.app/",
         "imgSrc": "/images/work/crypto-vk.webp"
     },
     {
