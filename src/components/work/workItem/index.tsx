@@ -34,9 +34,7 @@ const WorkItem = ({
         <span>0{index}.</span>
         <span>{name}</span>
       </div>
-      <div className={styles.main}>
-        <span>{}</span>
-      </div>
+
       <div className={styles.footer}>
         <span className={styles.icon}>
           {type === 'repo' ? (

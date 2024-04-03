@@ -1,50 +1,49 @@
-
 @mixin flexLayer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-weight: 700;
-    font-size: 28px;
-    text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 28px;
+  text-align: right;
 
-    @media screen and (min-width: 2000px) {
-        font-size: 36px;
-    }
+  @media screen and (min-width: 2000px) {
+    font-size: 36px;
+  }
 
-    @media screen and (max-width: 548px){
-        font-size: 22px;
-    }
-    
+  @media screen and (max-width: 548px) {
+    font-size: 22px;
+  }
 }
 
-.item{
-    height: 350px;
-    cursor: pointer;
+.item {
+  height: 350px;
+  cursor: pointer;
 
-    @media screen and (min-width: 2000px) {
-        height: 450px;
+  @media screen and (min-width: 2000px) {
+    height: 450px;
+  }
+
+  @media screen and (max-width: 400px) {
+    height: 250px;
+  }
+
+  &Container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .header,
+    .footer {
+      @include flexLayer;
     }
+    .footer {
+      justify-content: flex-end;
 
-    @media screen and (max-width: 400px){
-        height: 250px;
+      .icon {
+        width: 30px;
+        height: 30px;
+      }
     }
-
-    &Container{
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        .header, .footer{
-            @include flexLayer;
-        }
-        .footer{
-            justify-content: flex-end;
-
-            .icon{
-                width: 30px;
-                height: 30px;
-            }
-        }
-    }
+  }
 }
