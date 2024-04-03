@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <a
-        href="https://drive.google.com/file/d/1DaZFQcZVSeuCl8rO5ra2NTmHE6DWLyRJ/view?usp=sharing"
+        href="https://drive.google.com/file/d/1sPFKzP3HrZI9eUDpCVcGrg0w7kkZ1uRn/view?usp=sharing"
         target="_blank"
         rel="noreferrer"
         className={styles.resumeBtn}
@@ -23,7 +23,8 @@ const Footer = () => {
 
       <div className={styles.jobStatus}>
         <span className={styles.jobStatusDot} />
-        <span className={styles.jobStatusText}>Passive job search</span>
+        {/* <span className={styles.jobStatusText}>Passive job search</span> */}
+        <span className={styles.jobStatusText}>Active job search</span>
       </div>
 
       <span className={styles.upArrow} onClick={handleScrollUp}>
