@@ -65,6 +65,14 @@
   background-color: $brownBlack;
 }
 
+.bgColor-yellowSyrnyk {
+  background-color: $yellowSyrnyk;
+  color: $black;
+  svg {
+    fill: $black;
+  }
+}
+
 .hoverEffect {
   &Inner,
   &InnerReverse {
