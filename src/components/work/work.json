@@ -21,32 +21,11 @@
         "imgSrc": "/images/work/nokeep.webp"
     },
     {
-        "bgColor": "brownBlack",
-        "name": "Annotations app",
-        "type": "showcase",
-        "link": "https://annotations-app.vercel.app/",
-        "imgSrc": "/images/work/annotations.mp4"
-    },
-    {
-        "bgColor": "darkOceanBlue",
-        "name": "Crypto-vk",
-        "type": "showcase",
-        "link": "https://crypto-vk.vercel.app/",
-        "imgSrc": "/images/work/crypto-vk.webp"
-    },
-    {
         "bgColor": "white",
         "name": "Calendar",
         "type": "showcase",
         "link": "https://calendar-nine-woad.vercel.app/",
         "imgSrc": "/images/work/calendar.mp4"
-    },
-    {
-        "bgColor": "lightBlack",
-        "name": "Kanban",
-        "type": "showcase",
-        "link": "https://github-kanban-board.vercel.app/",
-        "imgSrc": "/images/work/kanban.mp4"
     },
     {
         "bgColor": "darkGrey",
