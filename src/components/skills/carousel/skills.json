@@ -12,6 +12,22 @@
         "alt": "Typescript"
     },
     {
+        "src": "/images/tech/nodejs.webp",
+        "alt": "NodeJS"
+    },
+    {
+        "src": "/images/tech/supabase.webp",
+        "alt": "Supabase"
+    },
+    {
+        "src": "/images/tech/expo.webp",
+        "alt": "Expo"
+    },
+    {
+        "src": "/images/tech/playwright.webp",
+        "alt": "Playwright"
+    },
+    {
         "src": "/images/tech/redux.webp",
         "alt": "Redux"
     },

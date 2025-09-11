@@ -47,7 +47,7 @@ const Header = () => {
             <span className={styles.imageInner}>
               <img
                 className={styles.nameImage}
-                src="/images/me.jpg"
+                src="/images/me.png"
                 alt="Tokyo Tower"
                 ref={hiddenImageRef}
                 width={250}

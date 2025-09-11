@@ -1,5 +1,12 @@
 [
     {
+        "bgColor": "lightBlack2",
+        "name": "Partly",
+        "type": "showcase",
+        "link": "https://apps.apple.com/ua/app/partly-confidence-calm/id6745524570",
+        "imgSrc": "/images/work/partly.webp"
+    },
+    {
         "bgColor": "lightBlack",
         "name": "Plurabook",
         "type": "showcase",
@@ -17,28 +24,7 @@
         "bgColor": "white",
         "name": "Nokeep",
         "type": "showcase",
-        "link": "https://nokeep.com/",
+        "link": "https://www.linkedin.com/company/nokeep/",
         "imgSrc": "/images/work/nokeep.webp"
-    },
-    {
-        "bgColor": "white",
-        "name": "Calendar",
-        "type": "showcase",
-        "link": "https://calendar-nine-woad.vercel.app/",
-        "imgSrc": "/images/work/calendar.mp4"
-    },
-    {
-        "bgColor": "darkGrey",
-        "name": "Crypto Dashboard",
-        "type": "repo",
-        "link": "https://github.com/Whisil/crypto-wallet-dashboard",
-        "imgSrc": "/images/work/crypto-dash.webp"
-    },
-    {
-        "bgColor": "green",
-        "name": "UPQODE",
-        "type": "showcase",
-        "link": "https://resplendent-haupia-0ff8ca.netlify.app/",
-        "imgSrc": "/images/work/upqode.mp4"
     }
 ]
