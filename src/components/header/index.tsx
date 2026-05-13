@@ -47,8 +47,8 @@ const Header = () => {
             <span className={styles.imageInner}>
               <img
                 className={styles.nameImage}
-                src="/images/me.png"
-                alt="Tokyo Tower"
+                src="/images/me.jpeg"
+                alt="David Haidamaka"
                 ref={hiddenImageRef}
                 width={250}
                 height={250}
@@ -62,12 +62,13 @@ const Header = () => {
         bgColor="yellow"
         className={styles.locationPseudo}
         mainClassName={styles.location}
+        containerClassName={styles.locationForeground}
         padding="large"
         hover
       >
         <h2 className={styles.locationText}>
           Based in <br />
-          Kyiv,Ukraine
+          Orio,Spain
         </h2>
       </SquareBlock>
     </header>

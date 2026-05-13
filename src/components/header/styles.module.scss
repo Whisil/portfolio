@@ -233,8 +233,12 @@
             @include textStyles;
             text-align: right;
             position: relative;
-            z-index: 2;
         }
+    }
+
+    .locationForeground{
+        position: relative;
+        z-index: 2;
     }
     
     @media screen and (max-width: 992px){
@@ -264,14 +268,16 @@
             content: "";
             display: block;
             position: absolute;
-            height: 50%;
+            inset: 0;
             width: 100%;
-            left: 0;
-            right: 0;
-            top: 0;
-            background-color: $blue;
+            height: 100%;
+            background-image: url('../../../public/images/spanish-flag.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             opacity: 0;
             transition: opacity .6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            z-index: 1;
         }
     }
 
