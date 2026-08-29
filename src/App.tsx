@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
-import Footer from './components/footer';
-import GetInTouch from './components/getInTouch';
-import Header from './components/header';
-import Skills from './components/skills';
-import Work from './components/work';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import NotFoundPage from './pages/NotFoundPage';
+import ProjectPage from './pages/projectPage';
 import styles from './styles/app.module.scss';
 
 function App() {
@@ -39,13 +38,13 @@ function App() {
   return (
     <>
       {!fontsLoaded && <div className={styles.loader} />}
-      <div className={styles.container}>
-        <Header />
-        <Skills />
-        <Work />
-        <GetInTouch />
-        <Footer />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/work/:slug" element={<ProjectPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
