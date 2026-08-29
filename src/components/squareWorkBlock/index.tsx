@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import styles from '../squareBlock/styles.module.scss';
 
@@ -39,11 +40,9 @@ const SquareWorkBlock = ({
   }, [isPlaying]);
 
   return (
-    <a
+    <Link
       className={clsx(styles.workMain, hover && styles.hoverEffect)}
-      href={link}
-      target="_blank"
-      rel="noreferrer"
+      to={link}
       onMouseEnter={() => setIsPlaying(true)}
       onMouseLeave={() => setIsPlaying(false)}
     >
@@ -96,7 +95,7 @@ const SquareWorkBlock = ({
           {children}
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
 

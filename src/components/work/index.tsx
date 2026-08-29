@@ -1,19 +1,19 @@
 import WorkItem from './workItem';
-import workDb from './work.json';
+import { projects } from '../../data/projects';
 
 import styles from './styles.module.scss';
 
 const Work = () => {
   return (
     <section className={styles.workContainer}>
-      {workDb.map((item, index) => (
+      {projects.map((item, index) => (
         <WorkItem
-          key={item.name}
+          key={item.slug}
           bgColor={item.bgColor}
           name={item.name}
-          type={item.type}
-          link={item.link}
-          mediaSrc={item.imgSrc}
+          type="showcase"
+          link={`/work/${item.slug}`}
+          mediaSrc={item.hero.src || ''}
           index={index + 1}
         />
       ))}
