@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <a
-        href="https://drive.google.com/file/d/1A8_KpzzHjlp4J7ydKWyG-4CBGSmgCelz/view?usp=drive_link"
+        href="https://drive.google.com/file/d/1z0Ylov_jhcx0nbFEXOqOvn4PeKe4xZH9/view?usp=sharing"
         target="_blank"
         rel="noreferrer"
         className={styles.resumeBtn}
