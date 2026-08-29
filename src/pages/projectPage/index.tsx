@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Footer from '../../components/footer';
@@ -12,6 +13,7 @@ const ProjectPage = () => {
   const { slug } = useParams();
   const project = getProject(slug);
   const [lightboxAsset, setLightboxAsset] = useState<MediaAsset>();
+  const [heroLoaded, setHeroLoaded] = useState(false);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'auto' });
@@ -88,9 +90,16 @@ const ProjectPage = () => {
             borderRadius={70}
             bgColor={project.bgColor}
             padding="none"
-            className={styles.heroMedia}
+            className={clsx(styles.heroMedia, heroLoaded && styles.heroLoaded)}
           >
-            <img src={project.hero.src} alt={project.hero.alt} />
+            <img
+              src={project.hero.src}
+              alt={project.hero.alt}
+              width={project.hero.width}
+              height={project.hero.height}
+              decoding="async"
+              onLoad={() => setHeroLoaded(true)}
+            />
           </SquareBlock>
         </section>
 

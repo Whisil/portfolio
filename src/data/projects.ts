@@ -7,6 +7,8 @@ export type MediaAsset = {
   alt: string;
   caption?: string;
   placeholder?: string;
+  width?: number;
+  height?: number;
 };
 
 export type FlowStep = {

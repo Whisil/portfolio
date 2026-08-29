@@ -10,7 +10,10 @@ type MediaFrameProps = {
 
 const MediaFrame = ({ asset, onOpen }: MediaFrameProps) => {
   const [failed, setFailed] = useState(false);
-  const [isPortrait, setIsPortrait] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isPortrait, setIsPortrait] = useState(
+    Boolean(asset.width && asset.height && asset.height > asset.width),
+  );
   const isPlaceholder = Boolean(asset.placeholder) || !asset.src || failed;
 
   return (
@@ -36,7 +39,7 @@ const MediaFrame = ({ asset, onOpen }: MediaFrameProps) => {
         </video>
       ) : (
         <button
-          className={styles.mediaButton}
+          className={clsx(styles.mediaButton, isLoaded && styles.mediaLoaded)}
           type="button"
           onClick={() => onOpen?.(asset)}
           aria-label={`Enlarge ${asset.alt}`}
@@ -46,13 +49,20 @@ const MediaFrame = ({ asset, onOpen }: MediaFrameProps) => {
             src={asset.src}
             alt={asset.alt}
             loading="lazy"
-            onLoad={(event) =>
+            decoding="async"
+            width={asset.width}
+            height={asset.height}
+            onLoad={(event) => {
               setIsPortrait(
                 event.currentTarget.naturalHeight >
                   event.currentTarget.naturalWidth,
-              )
-            }
-            onError={() => setFailed(true)}
+              );
+              setIsLoaded(true);
+            }}
+            onError={() => {
+              setFailed(true);
+              setIsLoaded(true);
+            }}
           />
         </button>
       )}

@@ -21,7 +21,9 @@
       "hero": {
         "type": "image",
         "src": "/images/work/partly.webp",
-        "alt": "Partly project logo"
+        "alt": "Partly project logo",
+        "width": 2560,
+        "height": 1288
       },
       "stack": [
         "React Native",
@@ -55,7 +57,9 @@
                 {
                   "type": "image",
                   "src": "/images/work/partly/img-1.webp",
-                  "alt": "Partly onboarding quiz screen"
+                  "alt": "Partly onboarding quiz screen",
+                  "width": 2520,
+                  "height": 1630
                 }
               ]
             },
@@ -67,7 +71,9 @@
                 {
                   "type": "image",
                   "src": "/images/work/partly/img-2.webp",
-                  "alt": "Partly guided Moment screen"
+                  "alt": "Partly guided Moment screen",
+                  "width": 2208,
+                  "height": 1132
                 }
               ]
             },
@@ -79,7 +85,9 @@
                 {
                   "type": "image",
                   "src": "/images/work/partly/img-3.webp",
-                  "alt": "Partly insight and daily ritual screen"
+                  "alt": "Partly insight and daily ritual screen",
+                  "width": 2298,
+                  "height": 1504
                 }
               ]
             }
@@ -146,7 +154,9 @@
       "hero": {
         "type": "image",
         "src": "/images/work/plurabook.webp",
-        "alt": "Plurabook project logo"
+        "alt": "Plurabook project logo",
+        "width": 2560,
+        "height": 1288
       },
       "stack": [
         "React Native",
@@ -178,7 +188,9 @@
                 {
                   "type": "image",
                   "src": "/images/work/plurabook/img-1.webp",
-                  "alt": "Plurabook book creation screen"
+                  "alt": "Plurabook book creation screen",
+                  "width": 1179,
+                  "height": 2556
                 }
               ]
             },
@@ -190,7 +202,9 @@
                 {
                   "type": "image",
                   "src": "/images/work/plurabook/img-2.webp",
-                  "alt": "Plurabook book generation screen"
+                  "alt": "Plurabook book generation screen",
+                  "width": 1179,
+                  "height": 2556
                 }
               ]
             },
@@ -202,7 +216,9 @@
                 {
                   "type": "image",
                   "src": "/images/work/plurabook/img-3.webp",
-                  "alt": "Plurabook reading and bookshelf screen"
+                  "alt": "Plurabook reading and bookshelf screen",
+                  "width": 1179,
+                  "height": 2556
                 }
               ]
             }
@@ -269,7 +285,9 @@
       "hero": {
         "type": "image",
         "src": "/images/work/syrnyk.webp",
-        "alt": "Syrnyk project logo"
+        "alt": "Syrnyk project logo",
+        "width": 2560,
+        "height": 1288
       },
       "stack": [
         "React Native",
@@ -302,7 +320,9 @@
                 {
                   "type": "image",
                   "src": "/images/work/syrnyk/img-1.webp",
-                  "alt": "Syrnyk fridge tracking screen"
+                  "alt": "Syrnyk fridge tracking screen",
+                  "width": 1170,
+                  "height": 2532
                 }
               ]
             },
@@ -314,7 +334,9 @@
                 {
                   "type": "image",
                   "src": "/images/work/syrnyk/img-2.webp",
-                  "alt": "Syrnyk recipe generation screen"
+                  "alt": "Syrnyk recipe generation screen",
+                  "width": 1170,
+                  "height": 2532
                 }
               ]
             },
@@ -326,7 +348,9 @@
                 {
                   "type": "image",
                   "src": "/images/work/syrnyk/img-3.webp",
-                  "alt": "Syrnyk guided cooking screen"
+                  "alt": "Syrnyk guided cooking screen",
+                  "width": 1170,
+                  "height": 2532
                 }
               ]
             }
@@ -393,7 +417,9 @@
       "hero": {
         "type": "image",
         "src": "/images/work/nokeep.webp",
-        "alt": "Nokeep project logo"
+        "alt": "Nokeep project logo",
+        "width": 2560,
+        "height": 1288
       },
       "stack": [
         "Next.js",
@@ -426,7 +452,9 @@
                 {
                   "type": "image",
                   "src": "/images/work/nokeep/Listing-1.webp",
-                  "alt": "Nokeep entry screen"
+                  "alt": "Nokeep entry screen",
+                  "width": 1512,
+                  "height": 982
                 }
               ]
             },
@@ -438,7 +466,9 @@
                 {
                   "type": "image",
                   "src": "/images/work/nokeep/Listing-2.webp",
-                  "alt": "Nokeep core interaction screen"
+                  "alt": "Nokeep core interaction screen",
+                  "width": 4536,
+                  "height": 2946
                 }
               ]
             },
@@ -450,7 +480,9 @@
                 {
                   "type": "image",
                   "src": "/images/work/nokeep/Listing-3.webp",
-                  "alt": "Nokeep successful outcome screen"
+                  "alt": "Nokeep successful outcome screen",
+                  "width": 1512,
+                  "height": 982
                 }
               ]
             }
