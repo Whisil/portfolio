@@ -10,7 +10,7 @@
         position: relative;
         padding: 20px;
         background-color: $white;
-        border-radius: 20px;
+        border-radius: $radius-control;
         overflow: hidden;
         display: flex;
         justify-content: center;
@@ -38,7 +38,7 @@
         }
 
         @media screen and (max-width: 460px){
-            border-radius: 12px;
+            border-radius: $radius-control-mobile;
             padding: 10px;
             img{
                 width: 32px;

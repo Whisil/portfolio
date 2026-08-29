@@ -6,7 +6,7 @@
     font-weight: 500;
     line-height: 1.2;
     padding: 40px 60px;
-    border-radius: 75px;
+    border-radius: $radius-control;
     border: 3px solid $yellow;
     transition: transform .3s ease-out, 
                 border-color .3s ease;
@@ -92,12 +92,12 @@
 
         @media screen and (max-width: 1080px){
             padding: 40px;
-            border-radius: 60px;
+            border-radius: $radius-control;
         }
 
         @media screen and (max-width: 740px){
             padding: 30px 40px;
-            border-radius: 50px;
+            border-radius: $radius-control-mobile;
         }
 
         &::placeholder{
@@ -120,7 +120,7 @@
 
     .submitBtn{
         position: relative;
-        border-radius: 75px;
+        border-radius: $radius-control;
         padding: 20px 30px;
         width: 100%;
         display: flex;
@@ -161,5 +161,13 @@
         &:active{
             transform: scale(0.98);
         }
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .input,
+    .textarea,
+    .submitBtn {
+        border-radius: $radius-control-mobile;
     }
 }

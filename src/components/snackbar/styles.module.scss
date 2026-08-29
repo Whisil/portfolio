@@ -10,7 +10,7 @@
     width: fit-content;
     padding: 20px 30px;
     text-align: center;
-    border-radius: 15px;
+    border-radius: $radius-control-mobile;
     overflow: hidden;
     background-color: $successBg;
     animation: .5s 0s ease-out appear,

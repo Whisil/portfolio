@@ -1,10 +1,10 @@
 @import '../../styles/colors.scss';
 
 .radius-70 {
-  border-radius: 70px;
+  border-radius: $radius-block;
 }
 .radius-75 {
-  border-radius: 75px;
+  border-radius: $radius-block;
 }
 
 .padding-md {
@@ -121,4 +121,11 @@
   // &:last-child {
   //   grid-column: span 2;
   // }
+}
+
+@media screen and (max-width: 600px) {
+  .radius-70,
+  .radius-75 {
+    border-radius: $radius-block-mobile;
+  }
 }

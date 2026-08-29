@@ -32,14 +32,14 @@
     }
 
     .heading{
-        margin: 40px 0;
+        margin: 48px 0;
         overflow: hidden;
         .crtText{
             font-size: 10vw;
             font-family: Press-Start-2P;
             cursor: default;
             color: $white;
-            line-height: 1.2;
+            line-height: 1.28;
             transform: translateZ(0);
             will-change: transform;
             text-shadow: 3px 1px 3px #ea36af, -2px -1px 3px #75fa69;
@@ -66,8 +66,8 @@
         z-index: 2;
         font-weight: 600;
         font-size: 48px;
-        line-height: 1.2;
-        margin-top: 100px;
+        line-height: 1.32;
+        margin-top: 112px;
         margin-left: 5%;
         margin-bottom: 20%;
         font-family: Press-Start-2P;
@@ -82,7 +82,7 @@
         }
 
         @media screen and (max-width: 780px){
-            margin-top: 50px;
+            margin-top: 64px;
             font-size: 3.5vw;
         }
 
