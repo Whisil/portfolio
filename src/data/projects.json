@@ -14,7 +14,7 @@
       "name": "Partly",
       "bgColor": "lightBlack2",
       "platform": "iOS/Android apps + Web",
-      "role": "Founder & Product Engineer",
+      "role": "Product Engineer",
       "year": "2025-2026",
       "status": "Discontinued",
       "summary": "An Internal Family Systems (IFS)-based emotional wellness app for consumers, paired with a B2B web platform giving enterprise teams privacy-safe visibility into team emotional wellbeing.",
@@ -39,7 +39,7 @@
         "paragraphs": [
           "Partly applies Internal Family Systems framework to a self-guided app format. Users work through themed journeys built from 75+ short interactive lessons combining insight, reflection, journaling, and choice-making, plus a companion that remembers context across sessions. It's deliberately positioned as self-understanding, not therapy.",
           "Beyond the consumer app, I built a full B2B layer: a marketing and onboarding funnel with quiz-driven onboarding (in the spirit of Headway's flow), and an enterprise admin dashboard showing team-level emotional trends, concerns, and AI-generated suggestions for improving team wellbeing - built with privacy safeguards so individual responses stay protected.",
-          "App design was heavily shaped by Skillsta's patterns. Built and shipped solo across the consumer app, marketing site, onboarding, and B2B product."
+          "App design was heavily shaped by Skillsta's patterns. Built and shipped across the consumer app, marketing site, onboarding, and B2B product."
         ]
       },
       "sections": [
@@ -147,7 +147,7 @@
       "name": "Plurabook",
       "bgColor": "lightBlack",
       "platform": "Mobile app",
-      "role": "Founder & Product Engineer",
+      "role": "Product Engineer",
       "year": "2024–2025",
       "status": "Published",
       "summary": "An AI-powered mobile app for creating, discovering, and reading personalized books. Users can turn a genre, idea, or a few lines of text into a complete story, then save and download books for offline reading.",
@@ -170,7 +170,7 @@
         "title": "Making book creation accessible",
         "paragraphs": [
           "Writing a book traditionally requires a significant amount of time, skill, and commitment before an idea becomes something readable. Plurabook explored how AI could reduce that barrier by letting anyone start with a genre, an idea, or just a few lines and turn it into a complete book.",
-          "As the solo founder and product engineer, I owned the product end-to-end, from product concept and UX through mobile development, backend architecture, AI integration, and release. The experience combined AI-assisted creation with a familiar reading model: users could create books, explore stories by genre, build a personal bookshelf, and download books for offline reading."
+          "As a product engineer, I owned the product end-to-end, from product concept and UX through mobile development, backend architecture, AI integration, and release. The experience combined AI-assisted creation with a familiar reading model: users could create books, explore stories by genre, build a personal bookshelf, and download books for offline reading."
         ]
       },
       "sections": [
@@ -254,7 +254,7 @@
           "items": [
             {
               "title": "Architecture",
-              "description": "Built the mobile application with React Native and TypeScript, with Supabase providing the backend layer. The architecture separated the core reading, bookshelf, discovery, and book-generation flows while keeping the system lightweight enough to iterate on as a solo engineer."
+              "description": "Built the mobile application with React Native and TypeScript, with Supabase providing the backend layer. The architecture separated the core reading, bookshelf, discovery, and book-generation flows while keeping the system lightweight enough to iterate on as a product engineer."
             },
             {
               "title": "AI and data",
@@ -278,7 +278,7 @@
       "name": "Syrnyk",
       "bgColor": "lightBlack2",
       "platform": "iOS app",
-      "role": "Founder & Product Engineer",
+      "role": "Product Engineer",
       "year": "2024-2025",
       "status": "Discontinued",
       "summary": "An AI-powered cooking companion that turns whatever's in your fridge into ready-to-cook recipes, snap a photo, get a personalized recipe with full macro/micro breakdowns and a guided, step-by-step cook mode.",
@@ -302,7 +302,7 @@
         "paragraphs": [
           "Most recipe apps assume you're starting from a shopping list. Syrnyk starts from your fridge, snap a photo of your groceries and the app recognizes what you have, then generates recipes built entirely around it, tuned to skill level, available appliances, food type, and time constraints.",
           "Every recipe comes with a full nutrition table, ingredient-by-ingredient guidance, and a guided cook mode with per-step timers and instructions, so users go from 'what do I even make' to plated food without leaving the app.",
-          "Built and shipped solo end to end: product, design, mobile app, backend, and a fully automated content pipeline that published SEO-oriented recipe posts daily to drive organic acquisition."
+          "Built and shipped end to end: product, design, mobile app, backend, and a fully automated content pipeline that published SEO-oriented recipe posts daily to drive organic acquisition."
         ]
       },
       "sections": [
@@ -369,7 +369,7 @@
             {
               "title": "Fully automated AI content engine for SEO",
               "decision": "Built a separate pipeline that generated and published a new, SEO-oriented recipe post every day.",
-              "rationale": "As a solo founder with no marketing budget or team, an automated content engine was the only scalable acquisition channel available."
+              "rationale": "As a product engineer with no marketing budget or team, an automated content engine was the only scalable acquisition channel available."
             },
             {
               "title": "Gamification and social layer on top of a utility core",
@@ -400,7 +400,7 @@
         }
       ],
       "outcomes": [
-        "Organic reach into the millions on TikTok, driven by recipre and cooking related content, with strong initial App Store pickup as a solo-built MVP.",
+        "Organic reach into the millions on TikTok, driven by recipre and cooking related content, with strong initial App Store pickup as an MVP.",
         "Validated that the core AI loop: photo → recognized ingredients → generated nutrition-complete recipe, worked well as a product mechanic converting viral spikes into retained, paying users proved to be the harder problem.",
         "Gained hands-on experience connecting viral acquisition, AI product mechanics, and retention, shaping how I approach product validation and growth."
       ]
