@@ -39,7 +39,7 @@ const Skills = () => {
     >
       <div className={styles.heading}>
         <h1 ref={textRef} className={styles.crtText}>
-          Software
+          Product
         </h1>
         <h1 ref={textSecRef} className={styles.crtText}>
           Engineer
